@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pétala Biblioteca</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="bg" aria-hidden="true">
+  <svg viewBox="0 0 40 40" style="left:3%;top:14%;width:56px;--d:16s;--l:-0s"><rect x="6" y="5" width="28" height="31" rx="3" fill="#e9799c"/><rect x="10" y="5" width="3" height="31" fill="#c2476f"/><rect x="17" y="13" width="13" height="3" rx="1.5" fill="#fff" opacity=".85"/><rect x="17" y="19" width="9" height="3" rx="1.5" fill="#fff" opacity=".85"/></svg>
+  <svg viewBox="0 0 40 40" style="left:92%;top:22%;width:44px;--d:12s;--l:-2s"><path d="M20 35S4 24 4 14a8 8 0 0 1 16-2 8 8 0 0 1 16 2c0 10-16 21-16 21z" fill="#f6b3c8"/></svg>
+  <svg viewBox="0 0 40 40" style="left:7%;top:62%;width:60px;--d:18s;--l:-1s"><g fill="#f4a9c0"><circle cx="20" cy="9" r="7"/><circle cx="31" cy="18" r="7"/><circle cx="27" cy="31" r="7"/><circle cx="13" cy="31" r="7"/><circle cx="9" cy="18" r="7"/></g><circle cx="20" cy="21" r="5" fill="#fff3a8"/></svg>
+  <svg viewBox="0 0 40 40" style="left:48%;top:8%;width:34px;--d:10s;--l:-3s"><path d="M20 2l4 14 14 4-14 4-4 14-4-14-14-4 14-4z" fill="#f8c4d4"/></svg>
+  <svg viewBox="0 0 40 40" style="left:88%;top:58%;width:52px;--d:15s;--l:-4s"><path d="M20 3c9 6 12 15 6 23-2 3-6 5-6 11 0-6-4-8-6-11C8 18 11 9 20 3z" fill="#f2a0ba"/></svg>
+  <svg viewBox="0 0 40 40" style="left:80%;top:84%;width:50px;--d:17s;--l:-2s"><rect x="6" y="5" width="28" height="31" rx="3" fill="#e9799c"/><rect x="10" y="5" width="3" height="31" fill="#c2476f"/><rect x="17" y="13" width="13" height="3" rx="1.5" fill="#fff" opacity=".85"/><rect x="17" y="19" width="9" height="3" rx="1.5" fill="#fff" opacity=".85"/></svg>
+  <svg viewBox="0 0 40 40" style="left:22%;top:86%;width:40px;--d:13s;--l:-5s"><path d="M20 35S4 24 4 14a8 8 0 0 1 16-2 8 8 0 0 1 16 2c0 10-16 21-16 21z" fill="#f6b3c8"/></svg>
+  <svg viewBox="0 0 40 40" style="left:62%;top:70%;width:30px;--d:9s;--l:-1s"><path d="M20 2l4 14 14 4-14 4-4 14-4-14-14-4 14-4z" fill="#f8c4d4"/></svg>
+  <svg viewBox="0 0 40 40" style="left:95%;top:40%;width:46px;--d:16s;--l:-3s"><g fill="#f4a9c0"><circle cx="20" cy="9" r="7"/><circle cx="31" cy="18" r="7"/><circle cx="27" cy="31" r="7"/><circle cx="13" cy="31" r="7"/><circle cx="9" cy="18" r="7"/></g><circle cx="20" cy="21" r="5" fill="#fff3a8"/></svg>
+  <svg viewBox="0 0 40 40" style="left:35%;top:38%;width:38px;--d:12s;--l:-6s"><path d="M20 3c9 6 12 15 6 23-2 3-6 5-6 11 0-6-4-8-6-11C8 18 11 9 20 3z" fill="#f2a0ba"/></svg>
+</div>
+
+<header class="nav">
+  <div class="nav-in">
+    <a class="logo" href="#inicio" aria-label="Pétala Biblioteca">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="12" fill="#d6537a"/><path d="M20 9c5 4 7 9 4 14-1.500 2.500-4 4-4 8 0-4-2.500-5.500-4-8-3-5-1-10 4-14z" fill="#fff"/></svg>
+      Pétala
+    </a>
+    <nav class="links" aria-label="Seções">
+      <a href="#inicio" class="on">Início</a><a href="#acervo">Acervo</a><a href="#cadastros">Cadastros</a><a href="#emprestimo">Empréstimo</a><a href="#historico">Histórico</a>
+    </nav>
+    <div class="who"><i>AD</i><span>Administração</span></div>
+  </div>
+</header>
+
+<section class="hero" id="inicio" style="padding:0">
+  <div class="hero-in">
+    <div>
+      <h1>Cada livro no seu lugar, cada leitor bem atendido.</h1>
+      <p>Cadastre livros e leitores, registre empréstimos e acompanhe devoluções em um só lugar.</p>
+      <form class="search" id="heroSearch" role="search">
+        <input id="heroQ" placeholder="Buscar por título ou autor" aria-label="Buscar no acervo">
+        <button>Buscar</button>
+      </form>
+    </div>
+    <div class="stats" id="stats"></div>
+  </div>
+</section>
+
+<main>
+  <section id="acervo">
+    <div class="head">
+      <div><h2>Acervo</h2><p id="countTxt"></p></div>
+      <div class="chips" id="chips"></div>
+    </div>
+    <div class="carousel"><button class="nav-btn l" id="prev" aria-label="Anterior">‹</button><div class="books" id="books" tabindex="0"></div><button class="nav-btn r" id="next" aria-label="Próximo">›</button></div>
+  </section>
+
+  <section id="cadastros">
+    <div class="head">
+      <div><h2>Cadastros</h2><p>Adicione um livro ou um leitor.</p></div>
+      <div class="tabs" role="tablist"><button class="tab on" data-t="livro" role="tab">Novo livro</button><button class="tab" data-t="usuario" role="tab">Novo leitor</button></div>
+    </div>
+    <div class="split" id="tab-livro">
+      <div class="box">
+        <div class="two">
+          <div class="field"><label for="bt">Título</label><input id="bt" placeholder="Ex.: Capitães da Areia"><em>Informe o título.</em></div>
+          <div class="field"><label for="ba">Autor</label><input id="ba" placeholder="Ex.: Jorge Amado"><em>Informe o autor.</em></div>
+        </div>
+        <div class="field"><label for="bc">Categoria</label><select id="bc"><option value="">Selecione</option></select><em>Escolha uma categoria.</em></div>
+        <button class="primary" id="saveBook">Salvar livro</button>
+      </div>
+      <div class="box"><h3>Últimos livros</h3><p class="sub">Os mais recentes do acervo.</p><ul class="mini" id="recent"></ul></div>
+    </div>
+    <div class="split" id="tab-usuario" hidden>
+      <div class="box">
+        <div class="field"><label for="un">Nome completo</label><input id="un" placeholder="Ex.: Beatriz Almeida"><em>Informe nome e sobrenome.</em></div>
+        <div class="two">
+          <div class="field"><label for="ue">E-mail</label><input id="ue" type="email" placeholder="nome@email.com"><em>Informe um e-mail válido.</em></div>
+          <div class="field"><label for="up">Telefone</label><input id="up" inputmode="numeric" placeholder="(00) 00000-0000"><em>Informe o DDD e o número.</em></div>
+        </div>
+        <button class="primary" id="saveUser">Salvar leitor</button>
+      </div>
+      <div class="box"><h3>Leitores</h3><p class="sub">Livros que cada um tem em mãos.</p><ul class="mini" id="userList"></ul></div>
+    </div>
+  </section>
+
+  <section id="emprestimo">
+    <div class="head"><div><h2>Novo empréstimo</h2><p>Siga os 3 passos. Só aparecem livros disponíveis.</p></div></div>
+    <div class="split">
+      <div class="box loanbox">
+        <div class="lh"><h3>Registrar empréstimo</h3></div>
+        <div class="lbody">
+          <div class="step"><span>1</span><div class="field"><label for="lb">Livro</label><select id="lb"></select><em>Escolha um livro disponível.</em></div></div>
+          <div class="step"><span>2</span><div class="field"><label for="lu">Leitor</label><select id="lu"></select><em>Escolha um leitor.</em></div></div>
+          <div class="step"><span>3</span><div class="two">
+            <div class="field"><label for="ld">Empréstimo</label><input id="ld" type="date"></div>
+            <div class="field"><label for="lr">Devolução</label><input id="lr" type="date"><em>Deve ser depois do empréstimo.</em></div></div></div>
+          <button class="primary" id="saveLoan">Confirmar empréstimo</button>
+        </div>
+      </div>
+      <div class="box"><h3>Resumo</h3><p class="sub">Confira antes de confirmar.</p><div class="preview" id="pv"></div>
+        <h3 style="font-size:17px">Próximas devoluções</h3><ul class="mini" id="soon"></ul></div>
+    </div>
+  </section>
+
+  <section id="historico">
+    <div class="head">
+      <div><h2>Histórico de empréstimos</h2><p>Marque como devolvido assim que o livro voltar.</p></div>
+      <div class="chips" id="hChips"></div>
+    </div>
+    <div class="hlist" id="hBody"></div>
+  </section>
+</main>
+
+<footer><div><span>Pétala Biblioteca · 2026</span><span>Versão demonstrativa: os dados ficam salvos só neste navegador.</span></div></footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+const CATS=["Romance","Ficção","Literatura","História","Infantil"];
+const COLORS={Romance:"#c2476f",Ficção:"#8a3f8f",Literatura:"#a93a5d",História:"#b5653e",Infantil:"#d9708f"};
+const iso=d=>{const x=new Date(d);return new Date(x.getTime()-x.getTimezoneOffset()*6e4).toISOString().slice(0,10)};
+const today=iso(new Date());
+const addDays=(s,n)=>{const d=new Date(s+"T12:00");d.setDate(d.getDate()+n);return iso(d)};
+const fmt=s=>s.split("-").reverse().join("/");
+const seed={
+ books:[
+  {id:1,t:"O Pequeno Príncipe",a:"Antoine de Saint-Exupéry",c:"Infantil"},
+  {id:2,t:"Dom Casmurro",a:"Machado de Assis",c:"Literatura"},
+  {id:3,t:"O Alquimista",a:"Paulo Coelho",c:"Ficção"},
+  {id:4,t:"Grande Sertão: Veredas",a:"Guimarães Rosa",c:"Literatura"},
+  {id:5,t:"Orgulho e Preconceito",a:"Jane Austen",c:"Romance"},
+  {id:6,t:"Sapiens",a:"Yuval Noah Harari",c:"História"}],
+ users:[
+  {id:1,n:"Mariana Silva",e:"mariana@email.com",p:"(15) 99111-2233"},
+  {id:2,n:"Lucas Oliveira",e:"lucas@email.com",p:"(15) 99222-3344"},
+  {id:3,n:"Ana Costa",e:"ana@email.com",p:"(15) 99333-4455"},
+  {id:4,n:"Rafael Mendes",e:"rafael@email.com",p:"(15) 99444-5566"}],
+ loans:[
+  {id:1,b:3,u:1,d:addDays(today,-4),r:addDays(today,10),done:false},
+  {id:2,b:2,u:2,d:addDays(today,-9),r:addDays(today,-2),done:true},
+  {id:3,b:1,u:3,d:addDays(today,-18),r:addDays(today,-4),done:false},
+  {id:4,b:4,u:4,d:addDays(today,-15),r:addDays(today,-5),done:true}]
+};
+let S;
+try{S=JSON.parse(localStorage.getItem("petala-v1"))}catch(e){}
+if(!S)S=JSON.parse(JSON.stringify(seed));
+const save=()=>{try{localStorage.setItem("petala-v1",JSON.stringify(S))}catch(e){}};
+const $=id=>document.getElementById(id);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+let q="",cat="Todos",hf="Todos";
+
+const openLoan=b=>S.loans.find(l=>l.b===b&&!l.done);
+const status=l=>l.done?["Devolvido","b-done"]:(l.r<today?["Atrasado","b-late"]:["Em aberto","b-open"]);
+const nextId=a=>a.reduce((m,x)=>Math.max(m,x.id),0)+1;
+
+function toast(m){const t=$("toast");t.textContent=m;t.classList.add("show");clearTimeout(toast.t);toast.t=setTimeout(()=>t.classList.remove("show"),2600)}
+function chips(el,list,cur,fn){el.innerHTML=list.map(c=>`<button class="chip ${c===cur?"on":""}" data-c="${c}">${c}</button>`).join("");el.onclick=e=>{const c=e.target.dataset.c;if(c)fn(c)}}
+function valid(pairs){let ok=true;pairs.forEach(([id,test])=>{const f=$(id).closest(".field");const good=test($(id).value.trim());f.classList.toggle("err",!good);if(!good)ok=false});return ok}
+
+const POOL=["photo-1512820790803-83ca734da794","photo-1481627834876-b7833e8f5570","photo-1544947950-fa07a98d237f","photo-1524995997946-a1c2e315a42f","photo-1495446815901-a7297e633e8d","photo-1526243741027-444d633d7365","photo-1507842217343-583bb7270b66"];
+const coverBg=b=>`background-image:url('https://images.unsplash.com/${POOL[b.id%POOL.length]}?auto=format&fit=crop&w=600&q=70'),linear-gradient(150deg,${COLORS[b.c]},#5b2138)`;
+const dd=(a,b)=>Math.round((new Date(a+"T12:00")-new Date(b+"T12:00"))/864e5);
+function preview(){
+  const b=S.books.find(x=>x.id==$("lb").value),u=S.users.find(x=>x.id==$("lu").value);
+  $("pv").innerHTML=b||u?`<div class="th" style="${b?coverBg(b):""}"></div><div><b>${b?esc(b.t):"Escolha um livro"}</b>${u?"Para "+esc(u.n):"Escolha um leitor"}</div>`
+  :`<div class="th"></div><div>Escolha o livro e o leitor para ver o resumo aqui.</div>`}
+function render(){
+  const late=S.loans.filter(l=>!l.done&&l.r<today).length, open=S.loans.filter(l=>!l.done).length;
+  $("stats").innerHTML=`<div class="stat"><b>${S.books.length}</b><span>livros no acervo</span></div>
+  <div class="stat"><b>${S.users.length}</b><span>leitores</span></div>
+  <div class="stat"><b>${open}</b><span>empréstimos em aberto</span></div>
+  <div class="stat ${late?"alert":""}"><b>${late}</b><span>${late===1?"devolução atrasada":"devoluções atrasadas"}</span></div>`;
+
+  chips($("chips"),["Todos",...CATS],cat,c=>{cat=c;render()});
+  const list=S.books.filter(b=>(cat==="Todos"||b.c===cat)&&(b.t+" "+b.a).toLowerCase().includes(q.toLowerCase()));
+  $("countTxt").textContent=`${list.length} ${list.length===1?"livro encontrado":"livros encontrados"}`;
+  $("books").innerHTML=list.length?list.map(b=>{
+    const l=openLoan(b.id);
+    return `<article class="book" style="${coverBg(b)}"><span class="badge st ${l?(l.r<today?"b-late":"b-open"):"b-ok"}">${l?(l.r<today?"Atrasado":"Emprestado"):"Disponível"}</span>
+    <div class="txt"><h4>${esc(b.t)}</h4><small>${esc(b.a)}</small>${l?`<span class="lent">Volta em ${fmt(l.r)}</span>`:`<button class="lendbtn" data-lend="${b.id}">Emprestar</button>`}</div></article>`}).join("")
+    :`<div class="empty">Nenhum livro encontrado. Tente outro nome ou categoria.</div>`;
+
+  $("bc").innerHTML=`<option value="">Selecione</option>`+CATS.map(c=>`<option>${c}</option>`).join("");
+  $("lb").innerHTML=`<option value="">Selecione um livro</option>`+S.books.filter(b=>!openLoan(b.id)).map(b=>`<option value="${b.id}">${esc(b.t)} — ${esc(b.a)}</option>`).join("");
+  $("lu").innerHTML=`<option value="">Selecione um leitor</option>`+S.users.map(u=>`<option value="${u.id}">${esc(u.n)}</option>`).join("");
+  $("userList").innerHTML=S.users.map(u=>{const n=S.loans.filter(l=>l.u===u.id&&!l.done).length;return `<li><b>${esc(u.n)}</b><span>${n} ${n===1?"livro":"livros"} em mãos</span></li>`}).join("");
+
+  $("recent").innerHTML=[...S.books].slice(-4).reverse().map(b=>`<li><b>${esc(b.t)}</b><span>${esc(b.a)}</span></li>`).join("");
+  const soon=S.loans.filter(l=>!l.done).sort((a,b)=>a.r.localeCompare(b.r)).slice(0,3);
+  $("soon").innerHTML=soon.length?soon.map(l=>{const b=S.books.find(x=>x.id===l.b),u=S.users.find(x=>x.id===l.u);return `<li><b>${esc(b?b.t:"")}</b><span>${esc(u?u.n.split(" ")[0]:"")} · ${fmt(l.r)}</span></li>`}).join(""):`<li><span>Nenhum livro emprestado agora.</span></li>`;
+  chips($("hChips"),["Todos","Em aberto","Atrasado","Devolvido"],hf,c=>{hf=c;render()});
+  const rows=[...S.loans].reverse().filter(l=>hf==="Todos"||status(l)[0]===hf);
+  $("hBody").innerHTML=rows.length?rows.map(l=>{
+    const b=S.books.find(x=>x.id===l.b)||{id:0,t:"(removido)",a:"",c:"Ficção"},u=S.users.find(x=>x.id===l.u)||{n:"(removido)"},[s2,cl]=status(l);
+    const left=dd(l.r,today),tot=Math.max(1,dd(l.r,l.d)),pct=l.done?100:Math.min(100,Math.max(4,Math.round(dd(today,l.d)/tot*100)));
+    const note=l.done?"Devolvido":left<0?`Atrasado há ${-left} ${-left===1?"dia":"dias"}`:left===0?"Devolver hoje":`Faltam ${left} ${left===1?"dia":"dias"}`;
+    const ini=u.n.split(" ").map(x=>x[0]).slice(0,2).join("");
+    return `<article class="loan ${l.done?"done":l.r<today?"late":""}"><div class="th" style="${coverBg(b)}"></div>
+    <div><b>${esc(b.t)}</b><small>${esc(b.a)}</small></div>
+    <div class="who2"><span class="av">${esc(ini)}</span>${esc(u.n)}</div>
+    <div><div class="note">${note}</div><div class="prog"><i style="width:${pct}%"></i></div><div class="dates"><span>Saída ${fmt(l.d)}</span><span>Volta ${fmt(l.r)}</span></div></div>
+    <div class="side"><span class="badge ${cl}">${s2}</span>${l.done?"":`<button class="act" data-ret="${l.id}">Devolver</button>`}</div></article>`}).join("")
+    :`<div class="noloan">Nenhum empréstimo nesta situação.</div>`;
+  preview();
+}
+
+/* eventos */
+$("heroSearch").onsubmit=e=>{e.preventDefault();q=$("heroQ").value;cat="Todos";render();$("acervo").scrollIntoView()};
+$("heroQ").oninput=e=>{q=e.target.value;render()};
+$("books").onclick=e=>{const id=e.target.dataset.lend;if(!id)return;$("lb").value=id;preview();$("emprestimo").scrollIntoView();setTimeout(()=>$("lu").focus(),500)};
+document.querySelectorAll(".tab").forEach(t=>t.onclick=()=>{
+  document.querySelectorAll(".tab").forEach(x=>x.classList.toggle("on",x===t));
+  $("tab-livro").hidden=t.dataset.t!=="livro";$("tab-usuario").hidden=t.dataset.t!=="usuario"});
+
+$("saveBook").onclick=()=>{
+  if(!valid([["bt",v=>v.length>1],["ba",v=>v.length>1],["bc",v=>v]]))return;
+  const b={id:nextId(S.books),t:$("bt").value.trim(),a:$("ba").value.trim(),c:$("bc").value};
+  S.books.push(b);save();
+  ["bt","ba","bc"].forEach(i=>$(i).value="");cat="Todos";q="";$("heroQ").value="";render();toast("Livro salvo no acervo.")};
+$("saveUser").onclick=()=>{
+  if(!valid([["un",v=>v.split(" ").length>1&&v.length>4],["ue",v=>/^\S+@\S+\.\S+$/.test(v)],["up",v=>v.replace(/\D/g,"").length>=10]]))return;
+  S.users.push({id:nextId(S.users),n:$("un").value.trim(),e:$("ue").value.trim(),p:$("up").value.trim()});
+  save();["un","ue","up"].forEach(i=>$(i).value="");render();toast("Leitor salvo.")};
+$("up").oninput=e=>{let v=e.target.value.replace(/\D/g,"").slice(0,11);
+  e.target.value=v.length>6?`(${v.slice(0,2)}) ${v.slice(2,7)}-${v.slice(7)}`:v.length>2?`(${v.slice(0,2)}) ${v.slice(2)}`:v};
+$("ld").value=today;$("lr").value=addDays(today,14);
+$("ld").onchange=()=>{$("lr").value=addDays($("ld").value||today,14)};
+$("saveLoan").onclick=()=>{
+  if(!valid([["lb",v=>v],["lu",v=>v],["lr",v=>v&&v>$("ld").value]]))return;
+  S.loans.push({id:nextId(S.loans),b:+$("lb").value,u:+$("lu").value,d:$("ld").value,r:$("lr").value,done:false});
+  save();$("lb").value="";$("lu").value="";hf="Todos";render();toast("Empréstimo registrado.");$("historico").scrollIntoView()};
+$("hBody").onclick=e=>{const id=e.target.dataset.ret;if(!id)return;
+  S.loans.find(l=>l.id==id).done=true;save();render();toast("Livro devolvido ao acervo.")};
+
+$("prev").onclick=()=>$("books").scrollBy({left:-540,behavior:"smooth"});
+$("next").onclick=()=>$("books").scrollBy({left:540,behavior:"smooth"});
+$("lb").onchange=$("lu").onchange=preview;
+/* menu ativo ao rolar */
+const links=[...document.querySelectorAll(".links a")];
+const io=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting)links.forEach(a=>a.classList.toggle("on",a.getAttribute("href")==="#"+en.target.id))}),{rootMargin:"-45% 0px -50% 0px"});
+document.querySelectorAll("section[id]").forEach(s=>io.observe(s));
+render();
+</script>
+</body>
+</html>
